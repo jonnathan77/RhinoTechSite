@@ -1,0 +1,7 @@
+{
+  "name": "RhinoTechFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
