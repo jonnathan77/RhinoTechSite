@@ -1,0 +1,18 @@
+/* Estilo para os itens de navegação */
+.nav-item {
+    padding: 5px 10px;  /* Adiciona um pouco de espaço dentro dos itens */
+    border-radius: 5px;  /* Bordas arredondadas para os itens */
+    cursor: pointer;
+  }
+  
+  .nav-item:hover {
+    background-color: #ddd;  /* Cor de fundo quando passar o mouse */
+  }
+  
+  /* Caso queira alterar o estilo do ion-title */
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
