@@ -3,7 +3,7 @@
   publish = "www"
 
 [context.production.environment]
-  NODE_VERSION = "16.x"  # Especifique a versão do Node.js que você está usando
+  NODE_VERSION = "18.x"  # Especifique a versão do Node.js que você está usando
   PYTHON_VERSION = "3.8"  # Especifique a versão do Python, se for necessário para alguma dependência
 
   # Caso queira evitar problemas com versões mais recentes do Python:
