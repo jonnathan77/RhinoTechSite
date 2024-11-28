@@ -54,6 +54,18 @@
   text-align: center; /* Centraliza o texto */
 }
 
+
+.text-overlayMobile1 {
+  position: absolute;
+  top: 17%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição para realmente centralizar */
+  color: white; /* Cor do texto */
+  font-size: 24px; /* Tamanho da fonte */
+  z-index: 2; /* Garante que o texto fique acima da imagem */
+  text-align: center; /* Centraliza o texto */
+}
+
 /* Container para as imagens */
 .image-container {
   position: relative;

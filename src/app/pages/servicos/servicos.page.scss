@@ -1,0 +1,52 @@
+ion-card {
+    margin: 15px;
+    border-radius: 10px;
+  }
+  
+  ion-card-header {
+    background-color: #113E7D; /* Cor de fundo para o cabeçalho do card */
+    color: white; /* Texto branco para o cabeçalho */
+    border-radius: 10px 10px 0 0;
+  }
+  
+  ion-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  ion-card-content {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  .testimonials ion-avatar {
+    border-radius: 50%;
+  }
+  
+  .testimonials ion-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .testimonials ion-item:last-child {
+    border-bottom: none;
+  }
+  
+  ion-label h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  ion-label p {
+    font-size: 1rem;
+    color: #555;
+  }
+  

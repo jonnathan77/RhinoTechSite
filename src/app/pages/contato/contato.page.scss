@@ -1,0 +1,43 @@
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .whatsapp-button-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-card {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  ion-card {
+    width: 100%;
+    height: 100%;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+  }
+
+  /* Definindo uma classe personalizada para o alerta */
+.custom-alert .alert-message {
+    color: black !important; /* Garantir que o texto do alerta seja preto */
+  }
+  
+  .custom-alert .alert-header {
+    color: black !important; /* Garantir que o título do alerta também seja preto */
+  }
+  
+  .custom-alert .alert-button {
+    color: black !important; /* Garantir que o botão tenha texto preto */
+  }
+
+  .alert-message.sc-ion-alert-ios {
+    color: black !important;
+  }

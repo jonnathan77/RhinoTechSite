@@ -5,7 +5,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <div>
+  <div *ngIf="!isMobile">
     <div>
       <div class="text-overlay">
         <h1 style="font-size: 65px">Conectando Inovação ao Sucesso Empresarial!</h1>
@@ -25,6 +25,24 @@
     </div>
   </div>
 
+
+<div *ngIf="isMobile">
+  <div class="mobile-layout">
+    <div class="text-overlayMobile1">
+      <h5 style="font-size: 30px">Conectando Inovação ao Sucesso Empresarial!</h5>
+    </div>
+    <img
+      style="
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(40%);
+      "
+      src="../../assets/imgs/telafundo.png"
+    />
+  </div>
+</div>
+
   <div style="width: 100%; background-color: #000; color: #fff; padding: 40px 10%; display: flex; align-items: center;">
     <!-- Coluna de texto (à esquerda) -->
     <div style="flex: 1; text-align: left; padding-right: 20px;">
@@ -36,9 +54,9 @@
       </p>
       <ul style="font-size: 18px; list-style-type: none; padding-left: 0;">
         <li>✔ Gestão completa</li>
-        <li>✔ Suporte 24h para garantir a continuidade dos seus negócios</li>
+        <li *ngIf="!isMobile">✔ Suporte 24h para garantir a continuidade dos seus negócios</li>
         <li>✔ Agilidade na iniciação</li>
-        <li>✔ Entregas cíclicas e incrementais</li>
+        <li *ngIf="!isMobile">✔ Entregas cíclicas e incrementais</li>
         <li>✔ Automações de Processos</li>
         <li>✔ Sistemas sob-medida</li>
       </ul>
@@ -51,15 +69,15 @@
   
 
   <div style="width: 100%; height: 20%;display: flex;">
-    <h3 style="color: black; display: flex;justify-content: center; align-items: center; width: 100%;">
+    <h3 style="color: black; display: flex;justify-content: center; align-items: center; width: 100%; margin: 20px;">
       Em poucas etapas a sua empresa tem à disposição uma equipe completa de tecnologia.
     </h3>
   </div>
 
-  <div style="width: 100%; height: 40%; background-color: #1c1c3c;">
-    <ion-content style="width: 100%;">
+  <div *ngIf="!isMobile" style="width: 100%; height: 40%; background-color: #1c1c3c; overflow: hidden; ">
+    <ion-content style="width: 100%; overflow: hidden; ">
       <!-- Container de Cards -->
-      <div style="display: flex; justify-content: space-around; margin-top: 40px; gap: 20px; padding: 10px;">
+      <div style="display: flex; justify-content: space-around; margin-top: 40px; gap: 20px; padding: 10px; overflow: hidden; ">
     
         <!-- Card 1: EQUIPE ESPECIALIZADA -->
         <div style="position: relative; width: 30%; text-align: center;">
@@ -110,6 +128,55 @@
     </ion-content>
   </div>
   
+  <div *ngIf="isMobile" style="width: 100%; height: 65vh; background-color: #1c1c3c; padding: 20px;">
+    <ion-content style="width: 100%; padding: 0;">
+  
+      <!-- Container de Cards -->
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+  
+        <!-- Card 1: EQUIPE ESPECIALIZADA -->
+        <div style="position: relative; width: 100%; max-width: 350px; text-align: center; margin: 0 auto;display: flex;
+        justify-content: center;
+        margin-top: 50px;">
+          <!-- Número de identificação dentro do card -->
+          <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; border-radius: 50%; background-color: #fff; display: flex; justify-content: center; align-items: center; border: 2px solid #000; z-index: 1;">
+            <span style="font-size: 24px; font-weight: bold; color: #000;">1</span>
+          </div>
+  
+          <!-- Card de conteúdo -->
+          <ion-card style="background-color: #fff; color: #000; width: 100%; padding: 20px;">
+            <ion-card-header>
+              <ion-card-title>ENTENDIMENTO</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Realização das primeiras reuniões de alinhamento.
+            </ion-card-content>
+          </ion-card>
+
+       
+        </div>
+
+        <div style="position: absolute; top:  55%; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; border-radius: 50%; background-color: #fff; display: flex; justify-content: center; align-items: center; border: 2px solid #000; z-index: 1;">
+          <span style="font-size: 24px; font-weight: bold; color: #000;">2</span>
+        </div>
+
+        <ion-card style="background-color: #fff; color: #000;">
+          <ion-card-header style="margin-top: 30px;display: flex;
+          justify-content: center;
+          align-items: center;">
+            <ion-card-title>AVALIAÇÃO</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="display: flex;
+          justify-content: center;
+          align-items: center;">
+            Levantamento dos principais requisitos técnicos e de negócio e te entregamos a proposta.
+          </ion-card-content>
+        </ion-card>
+      </div>
+  
+    </ion-content>
+  </div>
+  
 
 
     <div style="background-color: #f3f3f3; padding: 20px 10px; text-align: center; position: relative; bottom: 0; width: 100%;">
@@ -140,7 +207,7 @@
       </div>
     </div>
   
-    <a href="https://wa.me/5531988622840" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; margin-right: 10px;">
+    <a href="https://api.whatsapp.com/send?phone=5531988622840&text=Ol%C3%A1,%20tudo%20bem?%0A%0AGostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20e%20desenvolvimento%20de%20software%20da%20Rhino%20Tecnologia%20:" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; margin-right: 10px;">
       <ion-icon name="logo-whatsapp" style="font-size: 60px; color: #25d366; background-color: #fff; border-radius: 50%; padding: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);"></ion-icon>
     </a>
 

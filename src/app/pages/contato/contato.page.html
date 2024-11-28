@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="contact-container">
+    <!-- Lado esquerdo: Botão para WhatsApp -->
+    <div class="whatsapp-button-container">
+      <ion-button style="margin-left: 20px;" color="primary" href="https://wa.me/55xxxxxxxxxx?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista" target="_blank">
+        Fale com um especialista
+      </ion-button>
+    </div>
+
+    <!-- Lado direito: Formulário de Contato -->
+    <div class="form-card" >
+      <ion-card style="background-color: #fff !important;">
+        <ion-card-header>
+          <ion-card-title style="color: black;">Formulário de Contato</ion-card-title>
+        </ion-card-header>
+        <ion-card-content style="background-color: #fff !important;">
+          <form style="background-color: #fff !important;" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <ion-item style="background-color: #fff !important;">
+              <ion-label position="floating">Nome</ion-label>
+              <ion-input type="text" name="name" [(ngModel)]="formData.name" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">E-mail</ion-label>
+              <ion-input type="email" name="email" [(ngModel)]="formData.email" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Mensagem</ion-label>
+              <ion-textarea name="message" [(ngModel)]="formData.message" required></ion-textarea>
+            </ion-item>
+
+            <div class="ion-padding-top">
+              <ion-button type="submit" [disabled]="!contactForm.valid" expand="full">Enviar</ion-button>
+            </div>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  isMobile: boolean = false;
+
+  constructor() {
+    this.checkDevice();
+  }
+
+  checkDevice() {
+    this.isMobile = window.innerWidth <= 768; // Altere o valor conforme necessário
+  }
 
 }
